@@ -27,6 +27,8 @@ export const extensionProduct: ProductInfo = {
     { icon: '🛏️', title: '发布图床三通道', desc: '文章与说说图片可选 站点服务器 / TG 图床 / CF 图床，失败自动降级' },
   ],
   screenshots: [
+    { src: '/shots/ext-bili-running.png', title: 'B 站视频总结 · 抓取字幕', caption: 'TED 演讲页右键「总结本页」：自动抓取 2812 字视频字幕，交由站点 AI 总结', tall: false },
+    { src: '/shots/ext-bili-editor.png', title: 'B 站视频总结 · 生成文章', caption: '字幕总结完成：自动生成标题，富文本编辑器呈现结构化 AI 正文，可编辑后一键发布', tall: false },
     { src: '/shots/ext-home.png', title: '侧边栏 · 首页动态', caption: '已连接站点：用户资料、帖子流、底部写说说（440px 侧栏实拍）', tall: true },
     { src: '/shots/ext-ai.png', title: '侧边栏 · AI 助手对话', caption: '真实调用站点 AI（deepseek-chat）流式回复，多模型可切换', tall: true },
     { src: '/shots/ext-bookmark.png', title: '侧边栏 · 书签夹', caption: '本地书签树 + 导入浏览器书签 + AI 识别添加', tall: true },
