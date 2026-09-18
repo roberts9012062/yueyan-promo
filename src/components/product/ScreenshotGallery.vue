@@ -9,6 +9,12 @@ const props = defineProps<{
   productName: string;
 }>();
 
+/** 拼接部署 base 前缀：截图 src 以 / 开头，GitHub Pages 子路径部署时需带上 BASE_URL */
+const resolveSrc = (src: string): string => {
+  const base: string = import.meta.env.BASE_URL.replace(/\/$/u, '');
+  return `${base}${src}`;
+};
+
 const activeIndex = ref<number | null>(null);
 
 const activeShot = computed<ScreenshotItem | null>((): ScreenshotItem | null =>
@@ -66,7 +72,7 @@ onUnmounted((): void => {
         @click="activeIndex = index"
       >
         <div class="g-img-wrap">
-          <img :src="shot.src" :alt="`${productName}演示截图：${shot.title}`" loading="lazy" />
+          <img :src="resolveSrc(shot.src)" :alt="`${productName}演示截图：${shot.title}`" loading="lazy" />
         </div>
         <figcaption>
           <strong>{{ shot.title }}</strong>
@@ -80,7 +86,7 @@ onUnmounted((): void => {
       <button class="lb-close" type="button" aria-label="关闭" @click="close">✕</button>
       <button class="lb-nav prev" type="button" aria-label="上一张" @click="move(-1)">‹</button>
       <figure class="lb-body">
-        <img :src="activeShot.src" :alt="`${productName}演示截图：${activeShot.title}`" />
+        <img :src="resolveSrc(activeShot.src)" :alt="`${productName}演示截图：${activeShot.title}`" />
         <figcaption>
           <strong>{{ activeShot.title }}</strong>
           <span>{{ activeShot.caption }}</span>
