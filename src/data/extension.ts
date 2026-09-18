@@ -14,6 +14,8 @@ export const extensionProduct: ProductInfo = {
   repoUrl: 'https://github.com/roberts9012062/yueyan-browser-extension',
   repoLabel: 'github.com/roberts9012062/yueyan-browser-extension',
   closedNote: null,
+  license: 'MIT',
+  isOpenSource: true,
   stack: ['Manifest V3', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Vite 6', 'Chrome / Edge 110+'],
   features: [
     { icon: '🏠', title: '首页动态', desc: '站点时间线实时同步，底部快捷写说说：文字 / 图 / 视频 / 音乐 / 链接' },

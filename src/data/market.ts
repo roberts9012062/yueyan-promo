@@ -10,10 +10,12 @@ export const marketProduct: ProductInfo = {
   intro:
     '月言博客的官方插件仓库：站点后台「插件商城」直接读取 GitHub 仓库清单，兼容性校验后一键安装 / 启用 / 卸载。TG 图床、音乐、B 站视频、导航、SEO……你的博客，随装随强。',
   siteUrl: 'https://github.com/roberts9012062/yueyan-plugins',
-  siteLabel: 'github.com/roberts9012062/yueyan-plugins',
+  siteLabel: 'GitHub · 插件库主页',
   repoUrl: 'https://github.com/roberts9012062/yueyan-plugins',
   repoLabel: 'github.com/roberts9012062/yueyan-plugins（源码即商城）',
   closedNote: null,
+  license: 'MIT',
+  isOpenSource: true,
   stack: ['GitHub 清单驱动', 'Casbin 钩子系统', '6 插入点钩子框架', '故障隔离', 'bpk 插件包'],
   features: [
     { icon: '🖼️', title: 'TG / CF 图床', desc: '文章图片直传 Telegram 或 Cloudflare R2，不占站点存储，浏览器插件共用同一图床' },

@@ -44,9 +44,11 @@ const route: readonly { step: string; desc: string; link: string; linkLabel: str
             </td>
             <td>
               <a v-if="product.repoUrl" :href="product.repoUrl" target="_blank" rel="noopener">{{ product.repoLabel }} ↗</a>
-              <span v-else class="dim">🔒 暂未开放源码</span>
+              <span v-else class="dim">🔒 {{ product.repoLabel }}</span>
             </td>
-            <td><span class="chip">MIT</span><span v-if="!product.repoUrl" class="chip off">闭源</span></td>
+            <td class="c-license">
+              <span class="chip" :class="{ off: !product.isOpenSource }">{{ product.license }}</span>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -136,12 +138,13 @@ const route: readonly { step: string; desc: string; link: string; linkLabel: str
   letter-spacing: 0.12em;
   color: var(--ink-3);
   font-weight: 600;
-  padding: 10px 12px;
+  padding: 12px 14px;
   border-bottom: 1px solid var(--line);
+  white-space: nowrap;
 }
 
 .repo-table td {
-  padding: 14px 12px;
+  padding: 20px 14px;
   font-size: 13.5px;
   border-bottom: 1px solid rgba(148, 178, 226, 0.08);
   vertical-align: middle;
@@ -165,6 +168,10 @@ const route: readonly { step: string; desc: string; link: string; linkLabel: str
   white-space: nowrap;
 }
 
+.c-license {
+  white-space: nowrap;
+}
+
 .dim {
   color: var(--ink-3);
 }
@@ -173,18 +180,18 @@ const route: readonly { step: string; desc: string; link: string; linkLabel: str
   display: inline-block;
   font-size: 11px;
   font-family: var(--font-mono);
-  padding: 3px 10px;
+  padding: 4px 12px;
   border-radius: 999px;
   background: rgba(52, 211, 153, 0.1);
   border: 1px solid rgba(52, 211, 153, 0.3);
   color: var(--accent-3);
+  white-space: nowrap;
 }
 
 .chip.off {
   background: rgba(148, 178, 226, 0.08);
   border-color: rgba(148, 178, 226, 0.25);
   color: var(--ink-3);
-  margin-left: 6px;
 }
 
 .repo-note {

@@ -47,6 +47,10 @@ export interface ProductInfo {
   readonly repoUrl: string | null;
   readonly repoLabel: string;
   readonly closedNote: string | null;
+  /** 开源协议展示文案（如 MIT；闭源产品为「暂未开源」类文案） */
+  readonly license: string;
+  /** 是否已开源（决定协议徽章配色） */
+  readonly isOpenSource: boolean;
   readonly stack: readonly string[];
   readonly features: readonly FeatureItem[];
   readonly screenshots: readonly ScreenshotItem[];

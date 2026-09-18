@@ -12,9 +12,11 @@ export const relayProduct: ProductInfo = {
   siteUrl: 'https://c8.wiki/',
   siteLabel: 'c8.wiki · 线上站点',
   repoUrl: null,
-  repoLabel: '暂未开放源码',
-  closedNote: '中继站目前暂未开放源码，可直接使用线上 c8.wiki 实例对接；博客侧（boke）的对接能力已随主程序开源。',
+  repoLabel: '暂未开放源码（后续开源）',
+  closedNote: '中继站目前暂未开放源码（后续会开源），可直接使用线上 c8.wiki 实例对接；博客侧（boke）的对接能力已随主程序开源。',
   stack: ['Go 模块化单体', 'PostgreSQL', 'Redis', 'WS 实时扇出', 'html/template 服务端渲染', 'Docker Compose'],
+  license: '暂未开源 · 后续开放',
+  isOpenSource: false,
   features: [
     { icon: '🌍', title: '大世界聚合流', desc: '成员博客的公开说说与文章推上总线，每颗星球的首页都呈现同一个实时更新的「大世界」' },
     { icon: '🛰️', title: '内网星球桥接', desc: 'NAS 与内网部署的博客同样收发自如——中继站担任公网门面，全文与图片由总线托管' },

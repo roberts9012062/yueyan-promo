@@ -14,6 +14,8 @@ export const blogProduct: ProductInfo = {
   repoUrl: 'https://github.com/roberts9012062/boke',
   repoLabel: 'github.com/roberts9012062/boke',
   closedNote: null,
+  license: 'MIT',
+  isOpenSource: true,
   stack: ['Go 1.26 + Gin', 'PostgreSQL', 'Redis', 'Next.js 15.4', 'React 19', 'Tailwind CSS v4', 'Casbin RBAC'],
   features: [
     { icon: '✍️', title: '四形态创作', desc: '文字 / 图片（9 张压缩）/ 录音 / 视频发帖，标签、可见性、草稿箱、编辑已发布帖子一应俱全' },
